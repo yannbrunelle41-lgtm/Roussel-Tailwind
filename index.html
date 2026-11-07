@@ -17,7 +17,7 @@
         <header class=" py-4 bg-creme px-[clamp(16px,calc(16px+(100vw-768px)*0.238095),176px)]"> <!--Augmentation du padding de 16px à 176px ce qui une dif de 160px. Augmentation de l'écran de 768px à 1440 ce qui fait une dif de 672px. RAtio de progression : 160/672=0.238095.100vw correspond à toute la largeur de la fenêtre. Du coup dans la valeur progressive du milieu de clamp() on pose le calcul calc(Padding de départ + (100vw-valeur d'écran départ progression) x ratio de progression)-->
             <div class="md:flex items-center md:justify-between max-w-6xl mx-auto"> <!--je dois créer des div qui englode les sections pour appliquer une une taille max comme dnas le guide sans limiter le bg, j'ai dû déplacer des propriétés flex pour appliquer les modifications en conséquences. Si j'avais mieux lu le guide j'aurai surement construit mon html en sachant que j'allais limiter la taille max du contenu-->
                 <div class="flex justify-between items-center md:contents">
-                    <a class="flex items-center text-2xl font-logo text-bordeaux font-bold" href="index.html">
+                    <a class="flex items-center text-2xl font-logo text-bordeaux font-bold hover:text-sauge" href="index.html">
                         <span class="mr-2">
                             <img src="img/logo-roussel.svg" alt="Accueil">
                         </span>
@@ -26,11 +26,11 @@
                     <a class="block bg-framboise font-semibold rounded-full px-5 py-2 text-sm text-blanc md:order-2 hover:bg-bordeaux focus-visible:outline-2 focus-visible:outline-framboise focus-visible:outline-offset-4" href="lien-fictif">Commander</a>
                 </div>
                 <nav class="">
-                    <ul class="flex justify-between gap-6 text-sm text-encre font-medium"> <!-- j'ai pas trouvé d'états de hover dans le figma donc j'ai laissé comme ça. J'aurai fait un changement de couleur de texte comme hover:text-framboise, je trouve ça sympa visuellement-->
-                        <li><a href="lien-fictif">Bouquets</a></li>
-                        <li><a href="lien-fictif">Ateliers</a></li>
-                        <li><a href="lien-fictif">Livraison</a></li>
-                        <li><a href="lien-fictif">Contact</a></li>
+                    <ul class="flex justify-between gap-6 text-sm text-encre font-medium"> <!-- j'ai pas trouvé d'états de hover dans le figma donc j'ai décidé par moi-même-->
+                        <li><a class="hover:text-framboise" href="lien-fictif">Bouquets</a></li>
+                        <li><a class="hover:text-framboise" href="lien-fictif">Ateliers</a></li>
+                        <li><a class="hover:text-framboise" href="lien-fictif">Livraison</a></li>
+                        <li><a class="hover:text-framboise" href="lien-fictif">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -51,10 +51,10 @@
                             choisit les plus belles fleurs des producteurs de la région.
                         </p>
                         <div class="flex flex-col gap-4 pb-10 sm:flex-row sm:gap-4 sm:justify-center md:pb-0 md:justify-start">
-                            <a class="block rounded-full py-3 w-full mx-auto max-w-96 sm:max-w-45.75 sm:mx-0 bg-framboise text-center text-blanc font-semibold hover:bg-bordeaux focus-visible:outline-2 focus-visible:outline-framboise focus-visible:outline-offset-4"
+                            <a class="block rounded-full py-3 w-full mx-auto max-w-96 sm:max-w-45.75 sm:mx-0 bg-framboise text-center text-blanc font-semibold hover:bg-bordeaux  focus-visible:outline-2 focus-visible:outline-framboise focus-visible:outline-offset-4"
                                 href="lien-fictif">Voir les bouquets</a> <!--• Focus clavier : contour de 2 px, décalé de 2 px (voir les variantes État=Focus du composant Bouton). en regardant le figma de très près je vois une bordure de 2px mais une marge de 4px. Je pris la décision de choisir la valeur du visuel plutôt que du guide-->
                             <a class="block rounded-full py-3 w-full mx-auto max-w-96 sm:max-w-45.75 sm:mx-0 bg-transparent border-2 border-framboise text-center text-framboise font-semibold hover:bg-framboise hover:text-blanc focus-visible:outline-2 focus-visible:outline-framboise focus-visible:outline-offset-4"
-                                href="lien-fictif">Nos ateliers</a>
+                                href="lien-fictif">Nos ateliers</a> <!-- j'ai respecté le figma mais les tailles de ces 2 liens sont différents (border sur le 2ème) ce qui créé un non-alignement des textes-->
                         </div>
                     </div>
                     <picture class="md:flex-1 max-w-131 max-h-131">
@@ -84,7 +84,7 @@
                                 </p>
                                 <div class="flex justify-between">
                                     <p class="text-lg text-bordeaux font-semibold">35 €</p>
-                                    <button class="text-base font-semibold text-framboise cursor-pointer" type="button">Commander</button>
+                                    <button class="text-base font-semibold text-framboise cursor-pointer hover:outline-2 hover:outline-sauge hover:text-sauge hover:outline-offset-6 hover:rounded-full" type="button">Commander</button>
                                 </div>
                             </div>
                         </article>
@@ -99,7 +99,7 @@
                                 </p>
                                 <div class="flex justify-between">
                                     <p class="text-lg text-bordeaux font-semibold">45 €</p>
-                                    <button class="text-base font-semibold text-framboise cursor-pointer" type="button">Commander</button>
+                                    <button class="text-base font-semibold text-framboise cursor-pointer hover:outline-2 hover:outline-sauge hover:text-sauge hover:outline-offset-6 hover:rounded-full" type="button">Commander</button>
                                 </div>
                             </div>
                         </article>
@@ -114,7 +114,7 @@
                                 </p>
                                 <div class="flex justify-between">
                                     <p class="text-lg text-bordeaux font-semibold">39 €</p>
-                                    <button class="text-base font-semibold text-framboise cursor-pointer" type="button">Commander</button>
+                                    <button class="text-base font-semibold text-framboise cursor-pointer hover:outline-2 hover:outline-sauge hover:text-sauge hover:outline-offset-6 hover:rounded-full" type="button">Commander</button>
                                 </div>
                             </div>
                         </article>
@@ -184,19 +184,21 @@
             <div class="px-[clamp(16px,calc(16px+(100vw-768px)*0.238095),176px)]"> <!-- j'ai pas div tout le footer sinon la border aurait été limitée par le padding au lieu de parcourir toute la largeur de l'écran-->
                 <ul class="flex flex-col gap-10 py-12 md:flex-row md:justify-between max-w-6xl mx-auto">
                     <li class="flex flex-col gap-2 flex-1">
-                        <h3 class="font-titre text-2xl">Fleurs Roussel</h3>
+                        <a aria-label="Accueil" href="index.html" class="font-titre text-2xl hover:text-framboise">Fleurs Roussel</a>
                         <p>Artisan fleuriste à Blois depuis 1998.</p>
                     </li>
                     <li class="flex flex-col gap-0.5 flex-1">
                         <h4 class="text-sm font-semibold">Boutique</h4>
-                        <p>12 rue du Commerce, 41000 Blois</p>
+                        <a class="hover:underline" target="_blank" href="https://www.google.com/maps/search/?api=1&query=12+rue+du+Commerce+41000+Blois"> <!--J'avais evie d'essayer de rendre une adresse cliquable pour emmener vers google maps j'ai demander à ChatGPT de me donner le lien google. Ouverture dans un autre onglet me parait logique-->
+                            12 rue du Commerce, 41000 Blois
+                        </a>
                         <p>Du mardi au samedi, 9 h 30 à 19 h</p>
-                        <p>02 54 00 00 00</p> <!--Je n'ai pas rendu le téléphone cliquable, c'était pour moi superflux dans cet exercice mais sinon Marion nous a dit qu'il fallait notament pour la version mobile qui permet de le composer directement au même titre qu'un mail redirige vers l'envoi d'un mail à l'adresse sélectionnée-->
+                        <a class="hover:underline" href="tel:+332 54 00 00 00">02 54 00 00 00</a> <!-- J'ai rendu le tel cliquable aussi pour tester. J'ai trouvé sur MDN et je pensais que c'était plus compliqué mais juste avec le protocole "tel:" et l'indicatif pays sans le 0 après c'est tout simple-->
                     </li>
                     <li class="flex flex-col gap-1 flex-1">
                         <h4 class="text-sm font-semibold">Liens utiles</h4>
-                        <a href="lien-fictif">Livraison</a>
-                        <a href="lien-fictif">Mentions légales</a>
+                        <a class="hover:underline" href="lien-fictif">Livraison</a>
+                        <a class="hover:underline" href="lien-fictif">Mentions légales</a>
                     </li>
                 </ul>
             </div>
