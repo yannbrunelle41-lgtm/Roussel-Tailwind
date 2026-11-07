@@ -13,18 +13,18 @@
 
 <body class="font-text">
 
-    <header class="px-4 py-4 bg-creme">
-        <div class="flex justify-between items-center">
+    <header class=" py-4 bg-creme md:flex items-center md:justify-between px-[clamp(16px,calc(16px+(100vw-768px)*0.238095),176px)]"> <!--Augmentation du padding de 16px à 176px ce qui une dif de 160px. Augmentation de l'écran de 768px à 1440 ce qui fait une dif de 672px. RAtio de progression : 160/672=0.238095. du coup dans la valeur progressive du milieu de clamp() on pose le calcul calc(Padding de départ + (100vw-valeur d'écran départ progression) x ratio de progression)-->
+        <div class="flex justify-between items-center md:contents">
             <a class="flex items-center text-2xl font-logo text-bordeaux font-bold" href="index.html">
                 <span class="mr-2">
                     <img src="img/logo-roussel.svg" alt="Logo Fleurs Roussel Accueil">
                 </span>
                 Fleurs Roussel
             </a>
-            <a class="block bg-framboise rounded-full px-5 py-2 text-sm text-blanc" href="lien-fictif">Commander</a>
+            <a class="block bg-framboise rounded-full px-5 py-2 text-sm text-blanc md:order-2" href="lien-fictif">Commander</a>
         </div>
         <nav>
-            <ul class="flex justify-between">
+            <ul class="flex justify-between gap-6">
                 <li><a class="text-sm text-encre" href="lien-fictif">Bouquets</a></li>
                 <li><a class="text-sm text-encre" href="lien-fictif">Ateliers</a></li>
                 <li><a class="text-sm text-encre" href="lien-fictif">Livraison</a></li>
@@ -34,7 +34,7 @@
     </header>
 
     <main>
-        <section class="px-4 pt-8 pb-16 bg-creme">
+        <section class="pt-8 pb-16 bg-creme px-[clamp(16px,calc(16px+(100vw-768px)*0.238095),176px)]">
             <div>
                 <p class="uppercase font-semibold text-xs text-sauge tracking-widest mb-4">
                     Artisan fleuriste à Blois depuis 1998
@@ -58,7 +58,7 @@
                     alt="bouquets de fleurs dans un vase">
             </picture>
         </section>
-        <section class="py-16 px-4">
+        <section class="py-16 px-[clamp(16px,calc(16px+(100vw-768px)*0.238095),176px)]">
             <div>
                 <h2 class="font-titre text-3xl font-bold text-encre mb-4">Les bouquets de la semaine</h2>
                 <p class="text-base text-encre mb-10">
@@ -66,8 +66,8 @@
                     Blois.
                 </p>
             </div>
-            <div>
-                <article class="bg-creme max-w-89.5 w-full mx-auto rounded-2xl overflow-hidden mb-8">
+            <div class="sm:grid sm:grid-cols-[repeat(2,minmax(0,358px))] gap-8 lg:grid-cols-[repeat(3,minmax(0,358px))] sm:justify-between lg:justify-between"> <!--propriété css création de grid à 2 ou 3 colonnes en fonction de la taille d'écran. Minmax 0 pour permettre à la colonne de rétrécir. Grâce à ça on peut utiliser justify-between pour les plaquer les côtés et obtenir un padding final à 176px-->
+                <article class="bg-creme max-w-89.5 w-full mx-auto rounded-2xl overflow-hidden">
                     <div>
                         <img class="aspect-4/3 object-cover" src="img/bouquet-marche.svg" alt="">
                     </div>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="bg-creme max-w-89.5 w-full mx-auto rounded-2xl overflow-hidden mb-8">
+                <article class="bg-creme max-w-89.5 w-full mx-auto rounded-2xl overflow-hidden">
                     <div>
                         <img class="aspect-4/3 object-cover" src="img/bouquet-roses.svg" alt="">
                     </div>
@@ -115,7 +115,7 @@
             </div>
         </section>
 
-        <section class="flex flex-col py-16 px-4 text-center items-center gap-12 bg-petale text-encre">
+        <section class="flex flex-col py-16 px-[clamp(16px,calc(16px+(100vw-768px)*0.238095),176px)] text-center items-center gap-12 bg-petale text-encre">
             <h2 class="font-titre text-3xl font-bold">Pourquoi choisir Fleurs Roussel ?</h2>
             <ul class="flex flex-col gap-10">
                 <li>
@@ -142,7 +142,7 @@
             </ul>
         </section>
 
-        <section class="flex flex-col bg-sauge py-16 px-4 gap-10">
+        <section class="flex flex-col bg-sauge py-16 px-[clamp(16px,calc(16px+(100vw-768px)*0.238095),176px)] gap-10">
             <div>
                 <img class="rounded-2xl w-full max-w-131 mx-auto" src="img/atelier.svg" alt="">
             </div>
@@ -171,7 +171,7 @@
     </main>
 
     <footer class="bg-encre text-blanc text-sm">
-        <ul class="flex flex-col gap-10 py-12 px-4">
+        <ul class="flex flex-col gap-10 py-12 px-[clamp(16px,calc(16px+(100vw-768px)*0.238095),176px)]">
             <li class="flex flex-col gap-2">
                 <h3 class="font-titre text-2xl">Fleurs Roussel</h3>
                 <p>Artisan fleuriste à Blois depuis 1998.</p>
